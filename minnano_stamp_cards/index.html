@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>みんなのスタンプカード | Everyone's Stamp Card</title>
+<meta name="description" content="Simple stamp card app for daily achievements.">
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f6f7fb;color:#333}
+header{background:#FFDE59;color:#000;padding:32px;text-align:center}
+.container{max-width:900px;margin:auto;padding:20px}
+.card{background:#fff;border-radius:12px;padding:20px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+.gallery img{width:100%;border-radius:10px;border:1px solid #ddd}
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin: 8px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+footer{text-align:center;padding:30px;color:#666}
+.hidden{display:none}
+.lang{text-align:right}
+button{padding:8px 14px;margin-left:6px}
+</style>
+<script>
+function setLang(l){
+document.querySelectorAll("[data-lang]").forEach(e=>e.classList.add("hidden"));
+document.querySelectorAll('[data-lang="'+l+'"]').forEach(e=>e.classList.remove("hidden"));
+}
+window.onload=()=>setLang('ja');
+</script>
+</head>
+
+<body>
+	<header>
+		<img src="images/app_icon.png" alt="Icon" width="96">
+		<h1>みんなのスタンプカード</h1>
+		<h2>Everyone's Stamp Card</h2>
+		<p>Every Small Achievement Matters.</p>
+	</header>
+	<div class="container">
+		<div class="lang">
+			<button onclick="setLang('ja')">🇯🇵 日本語</button>
+			<button onclick="setLang('en')">🇺🇸 English</button>
+		</div>
+
+		<section class="card" data-lang="ja">
+			<h2>アプリについて</h2>
+			<p>毎日の小さな「できた！」を記録できるシンプルなスタンプカードアプリです。お手伝い・勉強・運動・ダイエット・習慣づくりなどに活用できます。</p>
+		</section>
+		<section class="card hidden" data-lang="en">
+			<h2>About</h2>
+			<p>A simple stamp card app for tracking daily achievements, building habits, and staying motivated.</p>
+		</section>
+
+		<section class="card" data-lang="ja">
+			<h2>主な機能</h2>
+			<ul>
+				<li>スタンプカードを複数作成できます</li>
+				<li>子どもや家族ごとにグループを分けてスタンプカードを管理できます</li>
+				<li>スタンプを押すだけのシンプルな操作</li>
+				<li>間違えて押したスタンプを取り消すこともできます</li>
+				<li>広告表示あり（画面下部にバナー広告が表示されます）</li>
+			</ul>
+			</section>
+		<section class="card hidden" data-lang="en">
+			<h2>Features</h2>
+			<ul>
+				<li>Create multiple stamp cards</li>
+				<li>Manage cards by creating groups for each child or family member</li>
+				<li>Simple one‑tap stamping</li>
+				<li>Undo stamps if you press one by mistake</li>
+				<li>Ads displayed (banner ads at the bottom of the screen)</li>
+			</ul>
+		</section>
+
+		<section class="card" data-lang="ja">
+			<h2>Examples / 利用例</h2>
+			<p>画像ファイルを <code>images/</code> フォルダへ配置してください。</p>
+			<div class="gallery">
+				<img src="images/screen1.png" alt="">
+				<img src="images/screen2.png" alt="">
+				<img src="images/screen3.png" alt="">
+			</div>
+		</section>
+		<section class="card hidden" data-lang="en">
+			<h2>Examples / 利用例</h2>
+			<p>画像ファイルを <code>images/</code> フォルダへ配置してください。!!!</p>
+			<div class="gallery">
+				<img src="images/screen1.png" alt="">
+				<img src="images/screen2.png" alt="">
+				<img src="images/screen3.png" alt="">
+			</div>
+		</section>
+
+		<section class="card" data-lang="ja">
+			<h2>お問い合わせ</h2>
+			<p>ご意見・ご要望・不具合報告はこちら。</p>
+			<a class="btn" href="https://forms.gle/32r7UvSpwX5sSNK99">Googleフォーム</a>
+		</section>
+		<section class="card hidden" data-lang="en">
+			<h2>Contact</h2>
+			<p>Please contact us using the Google Form.</p>
+			<a class="btn" href="https://forms.gle/32r7UvSpwX5sSNK99">Google Form</a>
+		</section>
+
+		<section class="card">
+			<h2>Downloads</h2>
+			<a class="btn" href="#">App Store</a>
+			<a class="btn" href="https://play.google.com/store/apps/details?id=com.tofukabochakan.minnano_stamp_cards&hl=ja">Google Play</a>
+		</section>
+
+		<section class="card" data-lang="ja">
+			<h2>プライバシーポリシー</h2>
+			<a class="btn" href="https://tofukabochakan.github.io/minnano_stamp_card/">Privacy Policy</a>
+		</section>
+		<section class="card hidden" data-lang="en">
+			<h2>Privacy Policy</h2>
+			<a class="btn" href="https://tofukabochakan.github.io/minnano_stamp_card/">Privacy Policy</a>
+		</section>
+
+	</div>
+	<footer>© 2026 Tofukabochakan</footer>
+</body></html>
